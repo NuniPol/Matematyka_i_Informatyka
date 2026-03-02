@@ -1,0 +1,45 @@
+1.   .py                     Nie jestem pewien.
+
+2.C:\Users\TK\AppData\Local\Microsoft\WindowsApps\python3.11.exe
+
+3.aby wpisać bezpośrednią komendę bez tworzenia pliku
+
+4.print((12 // (15 % 10)) ** 3)
+wyświetli się 
+((12 // (15 % 10)) ** 3)
+            /\ reszta z dzielenia a więc
+((12 // 5) ** 3)
+      /\ dzielenie bez reszty a więc
+(2 ** 3)
+   /\ potęga a więc
+8
+
+5.
+x = 12     x=12
+x = x – 5  x=12-5=7
+x += 3     x=x+3=7+3=10
+x * 12     120 ale nie mato znaczenia bo nie ma *=
+print(x)   a więc print(10)
+czyli efekt jest taki że pojawi się 10
+
+6.
+podstawa=float(input("podaj podstawe trójkąta")
+wysokosc=float(input("podaj wysokosc trójkąta")
+print(podstawa*wysokosc/2)
+
+7.maslo       str
+  12          int
+  13,3        float
+
+8. (3**(1,2*(3**4,7)))
+
+9.x/=10
+  y-=2
+
+10.bo zmienna y nie ma wartości string
+
+11.print(7 + 5) 12
+
+print("7" + "5") 75
+
+#print("informatyka") nic bo # jest ignorowany

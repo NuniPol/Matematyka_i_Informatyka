@@ -1,0 +1,49 @@
+1.
+kombo_mix=['qwerty',1.56,[6, 7, 11, 9]]
+print(kombo_mix[2][2])
+
+2.
+program 1:
+[5, 6, 7, 8, [9, 10, 11]]
+
+program 2:
+[5, 6, 7, 8, 9, 10, 11]
+
+3.
+co do 3. podpunktu to nie ma takiej listy jak "lista" więc zrobie to z listą "liczby"
+liczby=[7, 11, 2, 5, -6, 0, 45, 4, 15]
+liczby.sort()
+print(liczby*5)
+print(len(liczby))
+print(min(liczby))
+
+4.
+plik=open("liczby.txt","w")
+lista = ['Litwo', 'Ojczyzno', 'moja', 'Ty', 'jesteś', 'jak', 'zdrowie!']
+i=0
+list=0
+while i<len(lista):
+   str(list)+= lista[i]+" "
+   i+=1
+plik.write(list)
+
+5.
+plik1->pisania
+plik2->czytania
+plik3->dodania\dopisania
+
+6.
+dane=open("calkowite.txt","r")
+dany=dane.read()
+i=0
+lista=[]
+while i<len(dany):
+    if dany[i]!=0
+	    rob+=dany[i]
+	else:
+	    lista+=rob
+	i+=1
+	rob=""
+lista.sort()
+lista.reverse()
+print(lista)

@@ -1,0 +1,79 @@
+1. 
+i=12
+while i<10:
+    print(10)
+
+2.
+lista=list(range(11))
+lista.reverse()
+for i in lista:
+    print(i)
+
+albo
+
+lista=[10,9,8,7,6,5,4,3,2,1,0]
+for i in lista:
+    print(i)
+
+
+3.
+print(f"Końcowa suma to: {total}")  
+      /\wyświetli się error bo jest f
+
+total = 0 
+for i in range(1, 20):        dla liczb od 1 do 19 
+    if i % 5 == 0:            jeśli liczba jest podzielna przez 5
+        continue                  przejdź do następnej liczby
+    total += i                dodaj liczbę na której jesteś do total
+    if total > 100:           jeśli total jest większe od 100
+        print(f"Suma przekroczyła 500 przy liczbie {i}.")    napisz: Suma przekroczyła 500 przy liczbie {i}.
+		break                                                zakończ pętle
+print(f"Końcowa suma to: {total}")
+
+1    1
+2    3
+3    6
+4    10
+5    10
+6    16
+7    23
+8    31
+9    40
+10   40
+11   51
+12   63
+13   76
+14   90
+15   90
+16   106     total większy niż 100
+17
+18
+19
+
+wynik
+Suma przekroczyła 500 przy liczbie 16.
+
+4. nr 1:
+   0,1,2,3
+
+   nr 2:
+   mat,fiz,inf,pol
+   
+5.nie ma
+
+6.
+list(range(1012,10000,23))
+
+7.
+liczba=int(input("podaj liczbę całkowitą dodatnią: "))
+
+i=2
+
+licznik=0
+
+while i <= liczba:
+    if liczba%i==0:
+	    licznik+=1
+	i+=2
+
+print("ta liczba ma {licznik} dzielników parzystych")

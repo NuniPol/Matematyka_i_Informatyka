@@ -1,0 +1,64 @@
+1.
+while True:
+    print(1)
+
+2.
+Warunek trwania pętli: dopuki a mniejsze od 100
+Warunek przerwania pętli: jeżeli a większe lub równe 50
+
+3.
+n = 20 
+wynik = 0 
+while n >= 0: 
+    n -= 1 
+    if n % 2 == 1:   jeżeli n nieparzyste wynik się nie zwiększa
+        continue 
+    wynik += n 
+print(wynik)
+
+pętla powtórzy się 21 razy bo 20 i jeszcze wartość 0
+
+wrtości które będą w if
+
+19    0
+18    1
+17    1
+16    2
+15    2
+14    3
+13    3
+12    4
+11    4
+10    5
+9     5
+8     6
+7     6
+6     7
+5     7
+4     8
+3     8
+2     9
+1     9
+0     10
+-1    10
+
+a więc efekt będzie taki że program zwróci 10
+
+4.
+i od 1 do 12
+j -31,-1,15,18,132
+
+5.
+nie ma w pdf
+
+6.range(100,999)
+
+nie wiem bo chyba for to też rodzaj pętli
+
+7.
+n = int(input("podaj liczbę całkowitą dodatnią"))
+i = 0
+while i<n:
+    i+=1
+	if n%i==0:
+	    print(i)

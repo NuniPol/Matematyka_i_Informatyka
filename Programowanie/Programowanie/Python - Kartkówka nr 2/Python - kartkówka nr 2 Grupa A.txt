@@ -1,0 +1,120 @@
+1.Jaki będzie efekt wykonania poniższych linijek kodu? 
+print(1 != 1)
+False
+print(3 * 2 > 5)
+True
+print(5 * 0 <= 7)
+True
+print(9 == 1)
+False
+
+
+2.Jakiego typu jest zmienna x utworzona za pomocą poniższego kodu? 
+x = True
+Typu logicznego
+
+
+3.Napisz jaki błąd w wykorzystaniu instrukcji warunkowych popełniono w poniższym programie. 
+x = 6 
+elif x % 3 == 0:                                <----------
+    print('liczba x jest podzielna przez 3') 
+else: 
+    print('liczba x nie jest podzielna przez 3')
+
+najpierw powinno być if a nie elif
+
+
+4.Napisz kod programu, za pomocą którego pobierzesz od użytkownika jego wiek (w postaci liczby całkowitej 
+  dodatniej) i następnie w zależności od tego wieku wyświetlisz odpowiedni komunikat: 
+  • Jeżeli wiek użytkownika jest mniejszy od 18: Nie pracujesz, ale mam nadzieję, że się uczysz. 
+  • Jeżeli wiek użytkownika jest większy lub równy 18, ale mniejszy niż 65: Mam nadzieję, że już pracujesz. 
+  • Jeżeli wiek użytkownika jest większy lub równy 65 to: Miłego odpoczynku :). 
+Uwaga: 
+W programie należy użyć każdej z instrukcji: if, elif oraz else. 
+
+wiek=int(input("podaj wiek liczbą"))
+if wiek<18:
+    print("Nie pracujesz, ale mam nadzieję, że się uczysz.")
+elif wiek>=18 and wiek<65:
+    print("Mam nadzieję, że już pracujesz.")
+else:
+    print("Miłego odpoczynku :).")
+
+
+5.Zamień wytłuszczony fragment podanego niżej kodu na taki, w którym wystąpi tylko jedna instrukcja if 
+  oraz zostanie wykorzystany jeden ze spójników logicznych: and, or, not. 
+a = 4 
+b = 12 
+x = 7 
+wytłuszczony:
+if x > a: 
+    if x <= b: 
+        print('Należy do przedziału ({}, {}>'.format(a, b)) 
+
+
+if x>a and x<=b:
+    print('Należy do przedziału ({}, {}>'.format(a, b)) 
+
+
+6.Jaki będzie efekt wykonania podanego niżej kodu. Odpowiedź szczegółowo uzasadnij. 
+print((True or True and False) and not(True or not (False and True))) 
+                    /\                                    /\
+print((True   or   False) and not(True or              not False))
+              /\                                          /\
+print(	    True          and not (True or               True )
+                                        /\
+print(	    True          and      not True	)
+                                        /\
+print(       True     and               False)
+                      /\
+print(              False)					  
+
+a więc efektem będzie False
+
+
+7.Napisz program, który oceni wynik ucznia na podstawie jego punktów uzyskanych 
+z testu. Program ma przyjąć procent punktów uzyskanych z testu (punkty), liczbę 
+godzin, które uczeń powinien spędzić w szkole (godziny_przewidziane), liczbę godzin, 
+które uczeń faktycznie spędził w szkole (godziny_faktyczne) oraz liczbę godzin 
+nieobecnych, ale usprawiedliwionych (godziny_usprawiedliwione). Na podstawie tych 
+informacji program powinien przypisać odpowiednią ocenę. Ocena zostaje wystawiona 
+zgodnie z poniższymi zasadami. 
+Kryterium oceniania: 
+  • Ocena 2 (niedostateczna): Jeżeli uczeń uzyskał mniej niż 30% punktów. 
+  • Ocena 3 (dostateczna): Jeżeli uczeń uzyskał co najmniej 30%, ale mniej niż 50% punktów. 
+  • Ocena 4 (dobry): Jeżeli uczeń uzyskał co najmniej 50%, ale mniej niż 70% punktów. 
+  • Ocena 5 (bardzo dobry): Jeżeli uczeń uzyskał co najmniej 70%, ale mniej niż 90% punktów. 
+  • Ocena 6 (celująca): Jeżeli uczeń uzyskał co najmniej 90% punktów. 
+Specjalne zasady: 
+  • Jeżeli uczeń uzyskał co najmniej 75% maksymalnej liczby punktów, to program powinien przyznać ocenę
+    z wyróżnieniem (ocena pozostaje taka sama, ale dodajemy komunikat o wyróżnieniu). 
+  • Jeżeli uczeń uzyskał poniżej 30 punktów, ale był nieobecny przez co najmniej 3 dni z powodu choroby
+    (nieobecność usprawiedliwiona) to ocena będzie automatycznie zmieniona na 3, ale z komentarzem: 
+    Uwaga! Nieobecność usprawiedliwiona. 
+  • Jeżeli uczeń uzyskał bardzo dobrą ocenę (5), ale ma poniżej 50% obecności na lekcjach (niezależnie
+    od usprawiedliwienia nieobecności), to program automatycznie przypisuje ocenę 4 (bez wyróżnienia).
+
+Program:
+
+punkty= int(input("Podaj liczbę procent uzyskanych punktów na teście"))
+godziny_przewidziane=int(input("podaj liczbę godzin, które uczeń powinien spędzić w szkole"))
+godziny_faktyczne=int(input("podaj liczbę godzin, które uczeń faktycznie spędził w szkole"))
+godziny_usprawiedliwione=int(input("podaj liczbę godzin nieobecnych, ale usprawiedliwionych"))
+procent_obecności=(godziny_przewidziane-godziny_faktyczne)\godziny_przewidziane*100
+
+if punkty<30 and godziny_usprawiedliwione>=3:
+    print("3 Uwaga! Nieobecność usprawiedliwiona.")
+elif punkty>=75 and procent_obecności>=50 or punkty>=90:
+    print("dostajesz wyróżnienie")
+elif punkty>=75 and procent_obecności<50:
+    print("dobry")
+elif punkty<30:
+    print("niedostateczny")
+elif punkty>=30 and punkty<50:
+    print("dostateczny")
+elif punkty>=50 and punkty<70:
+    print("dobry")
+elif punkty>=70 and punkty<90:
+    print("bardzo dobry")
+elif punkty>=90:
+    print("celujący")

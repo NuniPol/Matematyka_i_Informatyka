@@ -1,0 +1,6 @@
+1.1.
+pierwsza liczba: 4489
+liczba liczb: 20
+
+1.2.
+7920 60

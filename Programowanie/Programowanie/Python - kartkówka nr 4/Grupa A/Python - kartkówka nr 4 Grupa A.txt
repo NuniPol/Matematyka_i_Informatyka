@@ -1,0 +1,49 @@
+1.
+przedmioty_r=["matematyka","informatyka"]
+
+print(przedmioty_r(1))
+
+2.
+['w', 's', 'a', 'd', 'x', 'y', 'z']
+
+3.
+n=int(input("podaj liczbę całkowitą dodatnią"))
+
+liczby=[]
+i=0
+while i<n:
+    x=int(input("podaj liczbę załkowitą"))
+	liczby.append(x)
+	i+=1
+
+print("Liczbę jedynek", liczby.count(1))
+if liczby.count(3)!=0:
+    print(liczby.index(3))
+else:
+    print("nie ma żadnych trójek")
+print(max(liczby))
+
+4.
+plik=open("liczby.txt","a")
+lista = [-10, 2, 8, 11, 45, 34]
+x=0
+while x<6:
+    plik.write(lista[x])
+	x+=1
+plik.close()
+plik=open("liczby.txt","r")
+for i in plik:
+    print(i)
+
+5.
+x-->1 1 2 3 5 8 13
+    2 4 6 8 10 12 14
+    1 3 5 7 9 11 13
+y-->[1, 1, 2, 3, 5, 8, 13, "\n",2, 4, 6, 8, 10, 12, 14, "\n",1, 3, 5, 7, 9, 11, 13]
+z-->[1, 1, 2, 3, 5, 8, 13]
+
+6.
+plik=open("całkowite.txt", "r")
+dane=plik.readlines()
+dane.sort()
+print(dane)
